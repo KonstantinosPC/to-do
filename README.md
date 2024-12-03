@@ -60,6 +60,8 @@ So you can do your first login you have to go to users tables and put the follow
 * Last Name: `<What ever you want>`
 * Perms: `2`
 
+Then after you do all that go to the `todo` file and search for the folder called `scripts`. In there there is going to be a file called __`db_conn.php`__. There you are going to put the hostname/ip address & credentials of your database.
+
 After you put that you can hop on to a browser and log in with the credentials admin:admin. Then all you have to do is create an account through the Interface and then remove the admin account from the database and then you are ready.
 
 ### I Hoped you liked the proccess. I hope it was not that difficult. See you in the next version. 😉

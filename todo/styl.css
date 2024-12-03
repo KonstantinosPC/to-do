@@ -1,0 +1,127 @@
+main{
+    margin: auto;
+    width: 60%;
+    background: rgb(255, 243, 187);
+    padding: 10px;
+    box-shadow: 0px 0px 9px 0px black;
+}
+
+@media screen and (max-width: 800px) {
+    main{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: auto;
+        width: 100%;
+        background: rgb(255, 243, 187);
+        padding: 10px;
+        
+    }
+}
+
+/* Login */
+
+.login{
+    width: 20%;
+    text-align: center;
+    background: rgb(255, 243, 187);
+    padding: 20px;
+    box-shadow: 0px 0px 9px 0px black;
+}
+
+@media screen and (max-width: 800px) {
+    .login{
+        width: 90%;
+        text-align: center;
+        background: rgb(255, 243, 187);
+        padding: 20px;
+        box-shadow: 0px 0px 9px 0px black;
+    }
+}
+
+.login input, .login button, .login select{
+    width: 90%;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.login button{
+    background: rgb(0, 119, 231);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 0px 9px 0px rgb(0, 119, 231);
+}
+
+/* Top */
+
+    /* Title */
+main h1{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+main .top h5{
+    float: left;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+}
+
+    /* Log out Button */
+
+.logout{
+    float: right;
+    border: none;
+    background: none;
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+
+.logout:active{
+    color: rgb(49, 0, 128);
+}
+
+/* Add list Field */
+
+main .add-list{
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+main .add-list input{
+    width: 80%;
+    padding: 10px;
+}
+
+main .add-list button{
+    width: 19%;
+    padding: 10px;
+}
+
+/* Tables */
+main table{
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px black solid;
+    width: 100%;
+}
+
+main .done td{
+    text-decoration:line-through;
+}
+
+main table th{
+    font-weight: bolder;
+    text-decoration:underline;
+    border: 1px black solid;
+    color: blue;
+}
+
+main footer{
+    text-align: center;
+    margin-top: 10px;
+}

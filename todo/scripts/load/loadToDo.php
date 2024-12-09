@@ -13,7 +13,7 @@
 
             $day = date("d/m/Y", strtotime($day));
             $onclick = 'window.location="./scripts/add/addToDone.php?id=' . $id . '"';
-            if($fullName === ($_SESSION["name"] . " " $_SESSION["lastname"])){
+            if($fullName === ($_SESSION["name"] . " " . $_SESSION["lastname"])){
                 $onclick2 = 'window.location="./scripts/add/deleteToDo.php?id=' . $id . '"';
                 echo '
                 <tr>

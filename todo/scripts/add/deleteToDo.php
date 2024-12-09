@@ -10,9 +10,9 @@
             $result = mysqli_query($conn, $sql);
 
             if(mysqli_num_rows($result)){
-                
-                $authorOld = $row["user"];
-                if($authorOld === ($_SESSION["name"] . " " . $_SESSION["lastname"])){
+                $row = mysqli_fetch_assoc($result);
+                $author = $row["user"];
+                if($author === ($_SESSION["name"] . " " . $_SESSION["lastname"])){
                     $sql2 = "DELETE FROM todolist WHERE id='$id'";
 
                     if(mysqli_query($conn, $sql2)){
@@ -23,8 +23,8 @@
                         exit();
                     }
                 }else{
-                    header("Location: ../../index.php?error=Sorry but this post doesn't belong to you");
-                    exit();
+                    //header("Location: ../../index.php?error=Sorry but this post doesn't belong to you");
+                    //exit();
                 }
             }
 

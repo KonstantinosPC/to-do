@@ -1,13 +1,15 @@
 <?php
-    include "./scripts/db_conn.php";
+   
 
     session_start();
     if (isset($_SESSION["username"]) && isset($_SESSION["perms"])) {
+         include "./scripts/db_conn.php";
 ?>
 <html>
     <head>
         <title>To-Do Support Version</title>
         <link rel="stylesheet" href="./styl.css">
+        <link rel="icon" type="image/x-icon" href="./assets/img/8476658.png">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -25,12 +27,13 @@
             </form>
             <table class="to-be">
                 <tr>
-                    <th width="8%">Check</th>
+                    <th width="5%">Check</th>
                     <th width="3%">ID</th>
-                    <th width="50%">Chore</th>
-                    <th width="30%">Author</th>
+                    <th width="55%">Chore</th>
+                    <th width="25%">Author</th>
                     <th width="12%">Day</th>
-                </tr>
+                    <th width="3%">Del.</th>
+                </tr> 
 
                 <?php include "./scripts/load/loadToDo.php"; ?>
             </table>

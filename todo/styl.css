@@ -1,9 +1,21 @@
+:root{
+    color-scheme: light dark;
+    --light-bg: rgb(255, 243, 187);
+    --light-color: black;
+    --light-shadow: black;
+    --light-colorB: blue;
+    --dark-bg: rgb(71, 71, 71);
+    --dark-color: white;
+    --dark-shadow: rgb(0, 74, 124);
+    --dark-colorB: rgb(115, 207, 235);
+}
+
 main{
     margin: auto;
-    width: 60%;
-    background: rgb(255, 243, 187);
+    width: 90%;
     padding: 10px;
-    box-shadow: 0px 0px 9px 0px black;
+    background: light-dark(var(--light-bg), var(--dark-bg));
+    box-shadow: 0px 0px 9px 0px light-dark(var(--light-shadow), var(--dark-shadow));
 }
 
 @media screen and (max-width: 800px) {
@@ -24,18 +36,18 @@ main{
 .login{
     width: 20%;
     text-align: center;
-    background: rgb(255, 243, 187);
+    background: light-dark(var(--light-bg), var(--dark-bg));
     padding: 20px;
-    box-shadow: 0px 0px 9px 0px black;
+    box-shadow: 0px 0px 9px 0px light-dark(var(--light-shadow), var(--dark-shadow));
 }
 
 @media screen and (max-width: 800px) {
     .login{
         width: 90%;
         text-align: center;
-        background: rgb(255, 243, 187);
+        background: light-dark(var(--light-bg), var(--dark-bg));
         padding: 20px;
-        box-shadow: 0px 0px 9px 0px black;
+        box-shadow: 0px 0px 9px 0px light-dark(var(--light-shadow), var(--dark-shadow));
     }
 }
 
@@ -76,7 +88,7 @@ main .top h5{
     border: none;
     background: none;
     text-decoration: underline;
-    color: blue;
+    color: light-dark(var(--light-colorB), var(--dark-colorB));
     cursor: pointer;
 }
 
@@ -118,10 +130,24 @@ main table th{
     font-weight: bolder;
     text-decoration:underline;
     border: 1px black solid;
-    color: blue;
+    color: light-dark(var(--light-colorB), var(--dark-colorB));
 }
 
-main footer{
+main table td .delete{
+    color: white;
+    background: red;
+    border-radius: 5px;
+    border: none;
+    padding: 3px;
+    box-shadow: 0px 0px 9px 0px red;
+}
+
+main footer{ 
     text-align: center;
     margin-top: 10px;
 }
+
+main footer a{
+    color: light-dark(var(--light-colorB), var(--dark-colorB));
+}
+

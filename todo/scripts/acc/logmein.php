@@ -2,6 +2,7 @@
 
 session_start();
 
+
 include "../db_conn.php";
 
 if(isset($_POST['username']) && isset($_POST['password'])){
@@ -15,7 +16,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 
     $uname = validate($_POST['username']);
     $passd = validate($_POST['password']);
-
+    $hashedPassd = hash('sha256', $passd);
 
     if(empty($uname)){
         header("Location: ../../login.php?error=Username is required");
@@ -30,7 +31,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
         if(mysqli_num_rows($result)){
             $row = mysqli_fetch_assoc($result);
 
-            if($row['username'] === $uname && password_verify($passd,$row['password'])){
+            if($row['username'] === $uname && ($hashedPassd === $row['password'])){
                 $_SESSION['id'] = $row['id'];
                 $_SESSION['username'] = $row['username'];
                 $_SESSION['name'] = $row['name'];

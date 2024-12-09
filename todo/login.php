@@ -7,6 +7,7 @@
     <head>
         <title>To-Do Support Version</title>
         <link rel="stylesheet" href="./styl.css">
+        <link rel="icon" type="image/x-icon" href="./assets/img/8476658.png">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>

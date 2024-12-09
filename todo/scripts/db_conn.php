@@ -1,9 +1,11 @@
 <?php
 
-$sname = "<Host/IP address of the database>";
+$sname = "192.168.170.191";
 $unae = "root";
-$password = "";
+$password = "KonstantinosPC";
 $db_name = "todo";
+
+
 
 $conn = mysqli_connect($sname, $unae, $password, $db_name);
 

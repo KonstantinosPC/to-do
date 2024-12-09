@@ -26,7 +26,7 @@
                 }
                 
 
-                $password = password_hash($password, PASSWORD_DEFAULT);
+                $password = hash('sha256',$password);
                 $sql = "INSERT INTO users (username, password, name, lastname, perms) VALUES ('$username', '$password', '$name', '$lastname', '$perms')";
                 
                 if(mysqli_query($conn, $sql)){

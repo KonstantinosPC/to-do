@@ -13,10 +13,10 @@
                 $row = mysqli_fetch_assoc($result);
                 $idOld = $row["id"];
                 $choreOld = $row["chore"];
-                $doneBySomeone = $_SESSION["name"] . " " . $_SESSION["lastname"];
-                $today = date("Y-m-d");
+                $oldAuthor = $row["oldAuthor"];
+                $oldDay = $row["oldDay"];
 
-                $sql2 = "INSERT INTO todolist (id, chore,user,day) VALUES ('$idOld', '$choreOld','$doneBySomeone', '$today')";
+                $sql2 = "INSERT INTO todolist (id, chore,user,day) VALUES ('$idOld', '$choreOld','$oldAuthor', '$oldDay')";
 
                 if(mysqli_query($conn, $sql2)){
                     $sql3 = "DELETE FROM donelist WHERE id='$idOld'";

@@ -13,7 +13,20 @@
 
             $day = date("d/m/Y", strtotime($day));
             $onclick = 'window.location="./scripts/add/addToDone.php?id=' . $id . '"';
-            echo '
+            if($fullName === ($_SESSION["name"] . " " $_SESSION["lastname"])){
+                $onclick2 = 'window.location="./scripts/add/deleteToDo.php?id=' . $id . '"';
+                echo '
+                <tr>
+                    <td><center><input type="checkbox" name="" id="" onclick='. $onclick .'></center></td>
+                    <td><center>' . $id .'</center></td>
+                    <td>' . $chore .'</td>
+                    <td>' . $fullName .'</td>
+                    <td><center>' . $day .'</center></td>
+                    <td><center><button class="delete" onclick=' . $onclick2 . '>Delete</button></center></td>
+                </tr>
+                ';
+            }else{
+                echo '
                 <tr>
                     <td><center><input type="checkbox" name="" id="" onclick='. $onclick .'></center></td>
                     <td><center>' . $id .'</center></td>
@@ -21,7 +34,9 @@
                     <td>' . $fullName .'</td>
                     <td><center>' . $day .'</center></td>
                 </tr>
-            ';
+                ';
+            }
+            
         }
     }
     

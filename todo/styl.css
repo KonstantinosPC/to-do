@@ -24,8 +24,9 @@ main{
         top: 0;
         left: 0;
         margin: auto;
-        width: 100%;
-        background: rgb(255, 243, 187);
+        width: 150%;
+        background: light-dark(var(--light-bg), var(--dark-bg));
+        box-shadow: 0px 0px 9px 0px light-dark(var(--light-shadow), var(--dark-shadow));
         padding: 10px;
         
     }

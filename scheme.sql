@@ -1,0 +1,28 @@
+CREATE DATABASE IF NOT EXISTS todo;
+USE todo;
+
+CREATE TABLE IF NOT EXISTS todolist (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    chore TEXT DEFAULT NULL,
+    user VARCHAR(50),
+    day DATE DEFAULT NULL
+);
+
+CREATE TABLE IF NOT EXISTS donelist (
+    id INT,
+    chore TEXT DEFAULT NULL,
+    doneby VARCHAR(250),
+    day DATE DEFAULT NULL,
+    oldAuthor VARCHAR(250) DEFAULT NULL,
+    oldDay DATE DEFAULT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    name VARCHAR(50),
+    lastname VARCHAR(50),
+    perms INT DEFAULT 1
+);

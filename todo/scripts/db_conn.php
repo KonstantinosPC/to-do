@@ -1,9 +1,9 @@
 <?php
 
-$sname = "192.168.170.191";
-$unae = "root";
-$password = "KonstantinosPC";
-$db_name = "todo";
+$sname = "";
+$unae = "";
+$password = "";
+$db_name = "";
 
 
 
